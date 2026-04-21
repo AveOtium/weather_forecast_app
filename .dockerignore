@@ -1,5 +1,4 @@
 .git
 .venv
-Dockerfile
-action_flow.txt
+action_flow.yaml
 __pycache__
