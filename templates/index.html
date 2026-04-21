@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Прогноз погоды</title>
+</head>
+<body>
+
+    {% if mess %}
+        <p>{{ mess }}</p>
+    {% else %}
+        <br>
+    {% endif %}
+    <br>
+
+    <p>Влажность : {{ humidity }}</p>
+    <p>Давление : {{ pressure }}</p>
+    <p>Температура : {{ temperature }}</p>
+    <p>Погода : {{ weather }}</p>
+    <p>Ветер : {{ wind }}</p>
+    <p>Город : {{ сity }}</p>
+
+    <br>
+    <form action="" method="get">
+        <label for="city">Укажите город:</label>
+        <input type="text" name="city" id="city">
+    </form>
+
+</body>
+</html>
