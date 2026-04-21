@@ -9,4 +9,4 @@ RUN python -m venv .venv \
 
 COPY . .
 
-CMD ["flask", "run", "--port=20007"]
+CMD ["python.exe", "app.py"]
