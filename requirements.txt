@@ -12,3 +12,4 @@ requests==2.33.1
 setuptools==65.5.0
 urllib3==2.6.3
 Werkzeug==2.2.2
+gunicorn==22.0.0
