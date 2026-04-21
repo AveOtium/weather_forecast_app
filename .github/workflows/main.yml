@@ -21,7 +21,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v4
         with:
-          images: ${{ secrets.DOCKER_USERNAME }}/fibonacci
+          images: ${{ secrets.DOCKER_USERNAME }}/weather_forecast_app
           tags: |
             type=semver,pattern={{version}}
             type=raw,value=latest
