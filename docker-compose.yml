@@ -1,24 +1,25 @@
 services:
   app:
     image: aveotium/weather_forecast_app:latest
+    #build: . 
     container_name: app
-    restart: unless-stopped
+    #restart: unless-stopped
 
   nginx:
     image: nginx:alpine
     container_name: nginx
-    restart: unless-stopped
+    #restart: unless-stopped
     depends_on:
       - app
     ports:
-      - "3000:20007"
+      - "3000:80"
     volumes:
       - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
 
   watchtower:
     image: percona/watchtower
     container_name: watchtower
-    restart: unless-stopped
+    #restart: unless-stopped
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
     command: --interval 30 app
